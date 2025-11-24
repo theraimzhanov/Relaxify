@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.raimzhanov.sweatapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SweatApp">
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.DashBoardActivity"
+            android:exported="false"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.raimzhanov.sweatapp.ui.activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

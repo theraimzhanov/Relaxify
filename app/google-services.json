@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "666310357797",
+    "project_id": "sweatapp-214e1",
+    "storage_bucket": "sweatapp-214e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666310357797:android:aaf5e12309cf88317ce0cc",
+        "android_client_info": {
+          "package_name": "com.raimzhanov.sweatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666310357797-4nm0gt92dslt5h29laho0vvof23a39cs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raimzhanov.sweatapp",
+            "certificate_hash": "670faeceab01a6f897f89b22ec2854aa28a735b9"
+          }
+        },
+        {
+          "client_id": "666310357797-hfqbombit6419mgi4lfahpeq1b5qvtqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClAo0OSuJbpt3VuoYhxKNfRxx1cDOKBD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666310357797-hfqbombit6419mgi4lfahpeq1b5qvtqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
