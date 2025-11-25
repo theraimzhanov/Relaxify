@@ -110,7 +110,6 @@
             app:selectedDotColor="#000000"/>
 
 
-        <!-- Popular Brands -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,40 +118,13 @@
             android:textStyle="bold"
             android:layout_marginTop="22dp"/>
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPopularBrands"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:src="@drawable/br1"
-                android:padding="0dp"/>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:src="@drawable/br6"
-                android:layout_marginStart="4dp"
-                android:padding="0dp"/>
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:src="@drawable/br56"
-                android:layout_marginStart="4dp"
-                android:padding="0dp"/>
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:src="@drawable/br57"
-                android:layout_marginStart="4dp"
-                android:padding="0dp"/>
-        </LinearLayout>
-
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:overScrollMode="never"/>
         <!-- Best Seller -->
         <TextView
             android:layout_width="wrap_content"

@@ -27,6 +27,7 @@ class ProductAdapter(
         val item = items[position]
 
         holder.binding.apply {
+            tvBrand.text = item.brand
             ivProduct.setImageResource(item.image)
             tvName.text = item.name
             tvPrice.text = item.price

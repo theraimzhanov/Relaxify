@@ -13,32 +13,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SweatApp">
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.SettingsActivity"
+            android:name=".ui.activities.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.DashBoardActivity"
+            android:name=".ui.activities.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.DashBoardActivity"
             android:exported="false"
             android:label="@string/app_name" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.UserProfileActivity"
+            android:name=".ui.activities.UserProfileActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.ForgotPasswordActivity"
+            android:name=".ui.activities.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.BaseActivity"
+            android:name=".ui.activities.BaseActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.RegisterActivity"
+            android:name=".ui.activities.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.LoginActivity"
+            android:name=".ui.activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.raimzhanov.sweatapp.ui.activities.SplashActivity"
+            android:name=".ui.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

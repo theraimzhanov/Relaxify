@@ -11,8 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.raimzhanov.sweatapp.R
 import com.raimzhanov.sweatapp.databinding.FragmentDashboardBinding
 import com.raimzhanov.sweatapp.model.Product
+import com.raimzhanov.sweatapp.models.Brand
+import com.raimzhanov.sweatapp.ui.activities.PaymentActivity
 import com.raimzhanov.sweatapp.ui.activities.SettingsActivity
 import com.raimzhanov.sweatapp.ui.adapters.BannerAdapter
+import com.raimzhanov.sweatapp.ui.adapters.BrandAdapter
 import com.raimzhanov.sweatapp.ui.adapters.ProductAdapter
 import kotlin.jvm.java
 class DashboardFragment : Fragment() {
@@ -38,6 +41,8 @@ class DashboardFragment : Fragment() {
 
         setupBannerSlider()
         setupRecyclerView()
+        setupPopularBrands()
+
 
         binding.ivUser.setOnClickListener {
             startActivity(Intent(requireContext(), SettingsActivity::class.java))
@@ -76,15 +81,22 @@ class DashboardFragment : Fragment() {
     private fun setupRecyclerView() {
 
         val products = listOf(
-            Product(1, "Glow Face Cream", "For smooth glowing skin", "$12.99", R.drawable.pr4),
-            Product(2, "Vitamin C Serum", "Brightens your skin", "$18.50", R.drawable.pr2),
-            Product(3, "Aloe Vera Gel", "Hydration & cooling", "$9.99", R.drawable.pr3),
-            Product(4, "Aloe Vera Gel", "Vitamin C & glowing", "$5.99", R.drawable.pr5),
-            Product(5, "Aloe Vera Gel", "Brighter & cooling", "$14.00", R.drawable.pr7)
+            Product(1, "Glow Face Cream", "For smooth glowing skin", "$12.99", "Lumiéra",R.drawable.pr4),
+            Product(2, "Vitamin C Serum", "Brightens your skin", "$18.50", "PureLyn",R.drawable.pr2),
+            Product(3, "Aloe Vera Gel", "Hydration & cooling", "$9.99", "Aveline",R.drawable.pr3),
+            Product(4, "Sun Vera Full", "Vitamin C & glowing", "$5.99", "NovaSkin",R.drawable.pr5),
+            Product(5, "Serie Fifa Cell", "Brighter & cooling", "$14.00", "Seraphique",R.drawable.pr7)
         )
 
         val adapter = ProductAdapter(products) { product ->
-            Toast.makeText(requireContext(), "Clicked: ${product.name}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(), PaymentActivity::class.java)
+            intent.putExtra("id", product.id)
+            intent.putExtra("name", product.name)
+            intent.putExtra("brand", product.brand)
+            intent.putExtra("description", product.description)
+            intent.putExtra("price", product.price)
+            intent.putExtra("image", product.image)
+            startActivity(intent)
         }
 
         binding.rvBestSeller.layoutManager =
@@ -92,6 +104,28 @@ class DashboardFragment : Fragment() {
 
         binding.rvBestSeller.adapter = adapter
     }
+
+    private fun setupPopularBrands() {
+
+        val brands = listOf(
+            Brand(1, "Lumiéra", R.drawable.br1),
+            Brand(2, "PureLyn", R.drawable.br2),
+            Brand(3, "Elara Bloom", R.drawable.br56),
+            Brand(4, "Seraphique", R.drawable.br57),
+            Brand(5, "Veloria", R.drawable.br45),
+            Brand(6, "Celestique", R.drawable.br6),
+        )
+
+        val adapter = BrandAdapter(brands) {
+            Toast.makeText(requireContext(), "Selected: ${it.name}", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.rvPopularBrands.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        binding.rvPopularBrands.adapter = adapter
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
