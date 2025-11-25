@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SweatApp">
         <activity
+            android:name=".ui.activities.SuccessActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.PaymentActivity"
             android:exported="false" />
         <activity

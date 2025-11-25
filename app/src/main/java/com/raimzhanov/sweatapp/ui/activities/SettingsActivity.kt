@@ -74,7 +74,7 @@ mUserDetails = user
                 }
                 R.id.tv_edit ->{
                     val intent = Intent(this,UserProfileActivity::class.java)
-                    intent.putExtra(Constants.EXTRA_USER_DETAILS,mUserDetails)
+                 //   intent.putExtra(Constants.EXTRA_USER_DETAILS,mUserDetails)
                     startActivity(intent)
                 }
             }
