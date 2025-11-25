@@ -1,14 +1,17 @@
 package com.raimzhanov.sweatapp.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.raimzhanov.sweatapp.R
 import com.raimzhanov.sweatapp.databinding.ActivityPaymentBinding
+import kotlin.jvm.java
 
 class PaymentActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPaymentBinding
@@ -54,9 +57,9 @@ class PaymentActivity : AppCompatActivity() {
         // Payment button
         binding.btnPayNow.setOnClickListener {
             if (validatePayment()) {
-                Toast.makeText(this, "Payment Successful 🎉", Toast.LENGTH_LONG).show()
-                finish()
+                startActivity(Intent(this, SuccessActivity::class.java))
             }
+            Toast.makeText(this, "Payment unsuccessful, please try again.", Toast.LENGTH_LONG).show()
         }
     }
 
