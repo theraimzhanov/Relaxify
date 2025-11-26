@@ -26,12 +26,5 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(Intent(this, LoginActivity::class.java))
                 finish()
         }, 1500)
-       val  anim = RotateAnimation(0.0f, 35.0f, Animation.ZORDER_TOP, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-
-        val view = findViewById<ImageView>(R.id.img_splash)
-        anim.interpolator = LinearInterpolator()
-        anim.repeatCount = Animation.INFINITE
-        anim.duration = 1700
-        view.startAnimation(anim);
     }
 }
