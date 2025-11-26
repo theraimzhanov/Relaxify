@@ -19,11 +19,11 @@
 
 
 
-# 🌸 Relaxify — Beauty & Skincare Shopping App
+# 🌸 Relaxify — Beauty & Skincare Shopping App 
 
 Relaxify is a modern and elegant **beauty-shopping Android app** designed to make skincare simple, enjoyable, and personalized.
 Browse premium creams, serums, gels, and cosmetic brands — all in one beautiful experience.
-
+This project made by Nau students 
 ---
 
 ## 🛠 Built With
