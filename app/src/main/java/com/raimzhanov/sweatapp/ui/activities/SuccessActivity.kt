@@ -21,7 +21,6 @@ class SuccessActivity : AppCompatActivity() {
         binding = ActivitySuccessActivtyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Wait 2 seconds → Go to Orders screen
         android.os.Handler().postDelayed({
             startActivity(Intent(this, DashBoardActivity::class.java))
             finish()

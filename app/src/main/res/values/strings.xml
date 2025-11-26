@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Relaxify</string>
-    <string name="time_to_sell">WELCOME TO RELAXIFY</string>
+    <string name="time_to_sell">Glow begins with  relaxation</string>
     <string name="content_description">image</string>
     <string name="title_login">LOGIN</string>
     <string name="et_hint_email_id">Email ID</string>
